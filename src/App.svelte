@@ -9,7 +9,6 @@
   const allPage = document.getElementsByTagName('html')
   const toggleDarkMode = () => {
     dark = dark === "dark" ? "" : "dark"
-    console.log(dark);
   }
 </script>
 
@@ -19,7 +18,7 @@
 
     <main class="relative">
 
-    <main on:click="{toggleDarkMode}" class="absolute top-0 right-5 rounded-b-xl overflow-hidden">
+    <main on:click="{toggleDarkMode}" class="absolute top-0 right-5 rounded-b-xl overflow-hidden shadow-md hover:shadow-lg">
       <Button content="Toggle Dark Mode"/>
     </main>
     <Footer/>

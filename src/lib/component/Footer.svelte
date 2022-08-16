@@ -12,7 +12,7 @@
         <span class="text-slate-800 dark:text-slate-200 font-bold text-2xl text-center">
             made with <img class="inline" src="./src/assets/svelte.svg" alt="svelte logo"> by <a href="https://www.linkedin.com/in/chakib-ouzane/" target=”_blank” class="underline">ch33kaboo</a>
         </span>
-        <a href="https://github.com/ch33kaboo/svelte-todo-app" target="_blank" class="text-slate-800 dark:text-slate-200 font-bold text-xl text-center bg-gray-200 bg-opacity-40 hover:bg-opacity-70 px-3 py-1 rounded-2xl select-none cursor-pointer hover:text-gray-800 dark:hover:text-gray-800 transition-all duration-150 capitalize flex items-center justify-center"><img class="inline w-8 h-8 mr-2" src="./src/assets/github.svg" alt="github logo"> see the code</a>
+        <a href="https://github.com/ch33kaboo/svelte-todo-app" target="_blank" class="text-slate-800 dark:text-slate-200 font-bold text-xl text-center bg-gray-200 bg-opacity-40 hover:bg-opacity-70 px-3 py-1 rounded-2xl select-none cursor-pointer hover:text-gray-800 dark:hover:text-gray-800 transition-all duration-150 capitalize flex items-center justify-center shadow-lg hover:shadow-xl"><img class="inline w-8 h-8 mr-2" src="./src/assets/github.svg" alt="github logo"> see the code</a>
     </div>
 </div>
 
