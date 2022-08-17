@@ -1,6 +1,6 @@
 # svelte ToDo app
 
-bleeding edge :fire:, blazingly fast :zap:, next generation :skull: TODO app.
+bleeding edge :fire:, blazingly fast :zap:, game changing :cold_face:, next generation :skull: TODO app.
 
 this is a project that I made to learn svelte, and I made a ToDo app instead of other things because why not.
 
