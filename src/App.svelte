@@ -6,7 +6,7 @@
   import TodoItem from "./lib/component/TodoItem.svelte";
   import TodoList from "./lib/component/TodoList.svelte";
 
-  const todos = [
+  let todos = [
     {
       title : "go to the gym",
       time : "8:30am"
