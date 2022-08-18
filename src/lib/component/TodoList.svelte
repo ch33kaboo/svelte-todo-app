@@ -3,6 +3,21 @@
     import TodoItem from "./TodoItem.svelte"
     import TaskForm from "./TaskForm.svelte"
 
+    let time
+    let title
+    let description
+
+    let addTask = () => {
+      console.log(time);
+      console.log(title);
+      console.log(description);
+    }
+
+    let emptyInputs = () => {
+      time = ""
+      title = ""
+      description = ""
+    }
 
     let todos = [
     {
@@ -36,15 +51,15 @@ const clearTasks = () => {
         <TodoItem title="{todo.title}" description="{todo.description}" time="{todo.time}"/>
     {/each}
     <div class="flex justify-end items-center gap-3">
-        <label for="my-modal" class="rounded-md overflow-hidden mt-3 px-3 py-1 text-slate-200 dark:text-slate-800 bg-gray-600 bg-opacity-80 dark:bg-gray-100 dark:bg-opacity-80 hover:bg-opacity-95 dark:hover:bg-opacity-95 modal-button cursor-pointer">add a task</label>
+        <label on:click="{emptyInputs}" for="my-modal" class="rounded-md overflow-hidden mt-3 px-3 py-1 text-slate-200 dark:text-slate-800 bg-gray-600 bg-opacity-80 dark:bg-gray-100 dark:bg-opacity-80 hover:bg-opacity-95 dark:hover:bg-opacity-95 modal-button cursor-pointer">add a task</label>
         <!-- I didnt use the Button component because it doesnt work with daisyUI, the modal button has to be a label tag but I had a Button component tag -->
             <input type="checkbox" id="my-modal" class="modal-toggle" />
 
             <div class="modal">
                 <div class="modal-box">
-                  <TaskForm/>
+                  <TaskForm bind:time="{time}" bind:title="{title}" bind:description="{description}"/>
                     <div class="modal-action">
-                        <label for="my-modal" class="btn">Add Task!</label>
+                        <label on:click="{addTask}" for="my-modal" class="btn">Add Task!</label>
                     </div>
                 </div>
             </div>            
