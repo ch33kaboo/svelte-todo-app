@@ -48,13 +48,17 @@ const clearTasks = () => {
     todos = []
 }
 
+const deleteItem = (e) => {
+  todos = todos.filter((task) => task.title != e.detail)
+}
+
 </script>
 
 <div class="mx-20 mb-9 mt-11 px-10 py-4 border border-slate-800 dark:border-slate-200 border-opacity-60 dark:border-opacity-60 rounded-md bg-slate-400 dark:bg-slate-800 bg-opacity-40 dark:bg-opacity-40 flex flex-col gap-1">
     {#each todos as todo}
-        <TodoItem title="{todo.title}" description="{todo.description}" time="{todo.time}"/>
+        <TodoItem on:deleteItem={deleteItem} title="{todo.title}" description="{todo.description}" time="{todo.time}"/>
         {:else}
-        <p class="text-center capitalize">there are no tasks to show</p>
+        <p class="text-center capitalize text-gray-800 dark:text-gray-200">there are no tasks to show</p>
     {/each}
     <div class="flex justify-end items-center gap-3">
         <label on:click="{emptyInputs}" for="my-modal" class="rounded-md overflow-hidden mt-3 px-3 py-1 text-slate-200 dark:text-slate-800 bg-gray-600 bg-opacity-80 dark:bg-gray-100 dark:bg-opacity-80 hover:bg-opacity-95 dark:hover:bg-opacity-95 modal-button cursor-pointer">add a task</label>
