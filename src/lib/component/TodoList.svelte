@@ -6,7 +6,7 @@
     let time
     let title
     let description
-
+    
     let addTask = () => {
       let newTask = {
         time,
@@ -16,7 +16,7 @@
 
       todos = [newTask, ...todos]
     }
-
+    
     let emptyInputs = () => {
       time = ""
       title = ""
@@ -43,15 +43,15 @@
       time : "1:00pm"
     },
   ]
-
-const clearTasks = () => {
+  
+  const clearTasks = () => {
     todos = []
-}
+  }
 
-const deleteItem = (e) => {
-  todos = todos.filter((task) => task.title != e.detail)
-}
-
+  const deleteItem = (e) => {
+    todos = todos.filter((task) => task.title != e.detail)
+  }
+  
 </script>
 
 <div class="mx-5 sm:mx-20 mb-9 mt-11 px-4 sm:px-10 py-4 border border-slate-800 dark:border-slate-200 border-opacity-60 dark:border-opacity-60 rounded-md bg-slate-400 dark:bg-slate-800 bg-opacity-40 dark:bg-opacity-40 flex flex-col gap-2 sm:gap-1">
@@ -69,7 +69,8 @@ const deleteItem = (e) => {
                 <div class="modal-box">
                   <TaskForm bind:time="{time}" bind:title="{title}" bind:description="{description}"/>
                     <div class="modal-action">
-                        <label on:click="{addTask}" for="my-modal" class="btn">Add Task!</label>
+                      <label class="btn" for="my-modal">cancel</label>
+                        <label on:click="{title == "" || time == "" ? console.log(0) : addTask}" for="{title == "" || time == "" ? "" : "my-moda"}l" class="btn {title == "" || time == "" ? "hover:bg-red-800" : ""} {title == "" || time == "" ? "cursor-not-allowed" : ""}">Add Task!</label>
                     </div>
                 </div>
             </div>            
