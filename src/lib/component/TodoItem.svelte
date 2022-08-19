@@ -13,11 +13,11 @@
 </script>
 
 <div class="flex flex-col sm:flex-row items-center justify-between gap-3 rounded-xl px-5 py-3 bg-slate-400 dark:bg-slate-800 border border-slate-800 dark:border-slate-200 border-opacity-60 dark:border-opacity-60 text-slate-800 dark:text-slate-200">
-    <div class="flex  items-center gap-6">
-        <div class="font-bold w- w-20">{time}</div>
-        <div class="flex flex-col items-start">
-            <div class="text-xl font-semibold capitalize">{title}</div>
-            <div class="-mt-1 {description === "no description given" ? "opacity-60" : "opacity-95"}">{description}</div>
+    <div class="flex flex-col sm:flex-row items-center gap-6">
+        <div class="text-lg sm:text-base -mb-4 sm:mb-0 font-bold text-center sm:text-left w-20">{time}</div>
+        <div class="flex flex-col items-center sm:items-start">
+            <div class="text-xl font-semibold capitalize text-center sm:text-start">{title}</div>
+            <div class="-mt-1 {description === "no description given" ? "opacity-60" : "opacity-95"} text-center sm:text-start">{description}</div>
         </div>
     </div>
     <div on:click={() => {deleteItem(title)}} class="cursor-pointer">
