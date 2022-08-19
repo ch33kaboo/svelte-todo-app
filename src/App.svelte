@@ -22,7 +22,7 @@
         <Button content="Toggle Dark Mode"/>
       </main>
     </main>
-    <div class="sm:mb-52 md:mb-32">
+    <div class="mb-32">
       <TodoList/>
     </div>
     <Footer/>
