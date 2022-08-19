@@ -13,7 +13,7 @@
   }
 </script>
 
-<div class="{dark}">
+<div class="{dark} overflow-x-hidden">
   <div class="bg-slate-300 dark:bg-slate-700 w-screen min-h-screen overflow-hidden">
     <Header/>
 
@@ -22,8 +22,9 @@
         <Button content="Toggle Dark Mode"/>
       </main>
     </main>
-
-    <TodoList/>
+    <div class="mb-32">
+      <TodoList/>
+    </div>
     <Footer/>
 
   </div>
